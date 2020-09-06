@@ -29,7 +29,7 @@ $(function () {
       dataType: 'json',
       success: function (data) {
         if (data.form_is_valid) {
-          $("#good-table tbody").html(data.html_good_list);
+          $("[id='good-table tbody']").html(data.html_good_list);
           $("#modal-good").modal("hide");
         }
         else {
