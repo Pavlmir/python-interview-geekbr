@@ -1,21 +1,21 @@
 {% if goods_list %}
-<table border="1">
-    <thead>
+<table class="table">
+    <thead class="thead-dark">
     <tr>
-        <th>Название</th>
-        <th>Дата поступления</th>
-        <th>Цена</th>
-        <th>Еденица измерения</th>
-        <th>Имя поставщика</th>
+        <th scope="col">Название</th>
+        <th scope="col">Дата поступления</th>
+        <th scope="col">Цена</th>
+        <th scope="col">Еденица измерения</th>
+        <th scope="col">Имя поставщика</th>
     </tr>
     </thead>
     {% for a in goods_list %}
     <tr>
-        <td>{{ a.good_name }}</td>
-        <td>{{ a.date_receipt }}</td>
-        <td>{{ a.price }}</td>
-        <td>{{ a.unit }}</td>
-        <td>{{ a.supplier }}</td>
+        <td scope="row">{{ a.good_name }}</td>
+        <td scope="row">{{ a.date_receipt }}</td>
+        <td scope="row">{{ a.price }}</td>
+        <td scope="row">{{ a.unit }}</td>
+        <td scope="row">{{ a.supplier }}</td>
     </tr>
     {% endfor %}
 </table>

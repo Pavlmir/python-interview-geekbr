@@ -8,7 +8,7 @@ class Good(models.Model):
         (2, 'кг.'),
     )
 
-    good_name = models.CharField('наименование товара', max_length=150)
+    good_name = models.CharField(verbose_name='наименование товара', max_length=150)
     date_receipt = models.DateField(verbose_name='дата поступления', default=datetime.datetime.now())
     price = models.DecimalField(verbose_name='цена', max_digits=8, decimal_places=0, default=0)
     unit = models.IntegerField(verbose_name='еденица измерения', choices=UNITS, default=UNITS[0])

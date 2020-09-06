@@ -42,7 +42,7 @@ $(function () {
 
   /* Подключение функций */
 
-  $(".js-create-good").click(loadForm);
+  $("#js-button-add").click(loadForm);
   $("#modal-good").on("submit", ".js-good-create-form", saveForm);
 
 });
