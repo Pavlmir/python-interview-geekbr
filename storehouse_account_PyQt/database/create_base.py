@@ -62,7 +62,7 @@ def insert_data(curs):
         curs.executemany(sql, values)
 
 
-def main():
+def create():
     import sqlite3
     conn = sqlite3.connect('storehouse.sqlite3')
 
@@ -75,4 +75,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    create()
